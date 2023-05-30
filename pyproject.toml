@@ -1,0 +1,10 @@
+[project]
+name = "vcbblueprint"
+version = "0.1.0"
+description = "A library for decoding Virtual Circuit Board blueprint strings"
+requires-python = ">=3.8"
+license = {file = "LICENSE"}
+maintainers = [
+{ name = "Brandon Martin-Anderson", email = "badhill@gmail.com" },
+]
+keywords = ["vcb", "blueprint", "virtual circuit board"]
