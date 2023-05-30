@@ -1,0 +1,38 @@
+from vcbblueprint import read_blueprint
+import pytest
+
+
+def test_vcbblueprints():
+    blueprint_content = "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"
+
+    version, layers = read_blueprint(blueprint_content)
+
+    assert version == (0, 0, 0)
+    assert len(layers) == 3
+    assert layers[0].shape == (262, 99, 4)
+    assert layers[1].shape == (262, 99, 4)
+    assert layers[2].shape == (262, 99, 4)
+
+
+def test_small():
+    content = "VCB+AAAACjCFUtd/AAAAAQAAAAIAAAAdAAAAAAAAAAgotS/9IAhBAAAAAAAAAAAAAAAAAB0AAAABAAAACCi1L/0gCEEAAAAAAAAAAAAAAAAAHQAAAAIAAAAIKLUv/SAIQQAAAAAAAAAAAAA="
+
+    version, layers = read_blueprint(content)
+
+    assert version == (0, 0, 0)
+    assert len(layers) == 3
+    assert layers[0].shape == (2, 1, 4)
+
+
+def test_too_small():
+    content = "foobarbizbaz"
+
+    with pytest.raises(ValueError):
+        version, layers = read_blueprint(content)
+
+
+def test_wrong_file_identifier():
+    content = "blahAAAACjCFUtd/AAAAAQAAAAIAAAAdAAAAAAAAAAgotS/9IAhBAAAAAAAAAAAAAAAAAB0AAAABAAAACCi1L/0gCEEAAAAAAAAAAAAAAAAAHQAAAAIAAAAIKLUv/SAIQQAAAAAAAAAAAAA="
+
+    with pytest.raises(ValueError):
+        version, layers = read_blueprint(content)
