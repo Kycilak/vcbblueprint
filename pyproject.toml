@@ -1,6 +1,10 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
 [project]
 name = "vcbblueprint"
-version = "0.1.0"
+version = "0.1.1"
 description = "A library for decoding Virtual Circuit Board blueprint strings"
 readme = "README.md"
 requires-python = ">=3.9"
@@ -8,6 +12,16 @@ license = {file = "LICENSE"}
 keywords = ["vcb", "blueprint", "virtual circuit board"]
 authors = [
   { name = "Brandon Martin-Anderson", email = "badhill@gmail.com" },
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+dependencies = [
+  "numpy~=1.24.0",
+  "zstd~=1.5.0"
 ]
 
 [project.urls]
