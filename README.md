@@ -15,7 +15,7 @@ Here is a simple usage example:
 ```python
 import vcbblueprint
 
-blueprint_string = "VCB+..."  # Your VCB blueprint string goes here.
+blueprint_string = "VCB+..." # a VCB blueprint string
 
 # read the blueprint string and get the version and layers
 version, layers = vcbblueprint.read_blueprint(blueprint_string)
