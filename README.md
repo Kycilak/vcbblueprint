@@ -1,8 +1,8 @@
-# Visual Circuit Board (VCB) Python Library
+# Virtual Circuit Board (VCB) Python Library
 
 ## Description
 
-This Python library provides a way to read Visual Circuit Board (VCB) blueprint strings and convert them into a convenient data structure.
+This Python library provides a way to read Virtual Circuit Board (VCB) blueprint strings and convert them into a convenient data structure.
 
 ## Installation
 
